@@ -30,7 +30,7 @@ body {
 
 .fondoRosa {
     background-color: rgba(0, 0, 0, 0.37);
-    z-index: 2; align-items: center;
+    z-index: 2; align-content: center;
 }
 
 .redondeado {
@@ -61,23 +61,25 @@ body {
     margin-top: 170px;
 }
 
-
+textarea {display: block; width: 100%;}
 
 .letrawhite {
     color: aliceblue;
 }
-
+.d-block {
+   overflow: hidden !important;
+}
 .letratittle {
     font-family: "libre baskerbille italic";
     color: black;
 }
-.solicitud {width: 80%; height: 80%; margin-top: 20%; padding-left: 30%;}
-.enviar {margin-left: 30%; margin-top: 10%;} 
+.solicitud {width: 50%; height: 50%; margin-top: 20%; margin-left: 25%;}
+.enviar {text-align: center;} 
 .ancho {
     max-width: 500%;
     max-block-size: 100%;
 }
-
+.accordion-body li {display: block; margin-top: 5%; margin-bottom: 0;}
 .letra {
     font-family: "libre baskerbille italic";
     color: $color-white;
@@ -85,7 +87,7 @@ body {
 .pdc {  text-align: center;
     width: 90%;
     padding: 10%;
-    margin-left: 5%;
+    margin-left: 5% !important;
     margin-top: 10%;
     margin-bottom: 10%;}
 
@@ -95,19 +97,19 @@ body {
 .pdc2 {
     text-align: center;
     width: 90%;
-    padding: 10%;
- margin-left: 5%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    padding: 8%;
+margin-left: 5%;
+  padding-top: 0;
 }
 
 
 .btnn {
-    margin-left: map-get($map: $btn, $key: margin-left);
+ 
     padding-bottom: map-get($map: $btn, $key: padding-bottom);
     width: map-get($map: $btn, $key: width);
     height: map-get($map: $btn, $key: height);
-    margin-top: map-get($map: $btn, $key: margin-top);
+   margin-top: map-get($map: $btn, $key: margin-top);
+
 }
 
 .btn__section {
@@ -122,7 +124,7 @@ body {
 }
 .abajo{
     background: rgba(0, 0, 0, 0.801);
-    transition: 4s;
+    transition: 3s;
     font-size: 40px !important;
    height: 20%; padding-top: -10px !important;
 }
@@ -130,7 +132,7 @@ body {
    margin-top: -50px; height: -10px; font-size: -5px;transition: 4s; z-index: 10;
 }
 .WIN {
-    margin-top: 10%;
+    margin-top: 20%;
     color: black;
     padding-bottom: 50px;
     font-size: $win-font;
@@ -139,24 +141,26 @@ body {
 ul {
     list-style: none;
     font-size: 0px;
-    margin-top: -3px;
+    margin-top: -5px;
+   
 
     ul {
         position: absolute;
         display: none;
         width: 100%;
         margin-top: 25px;
-
+        align-items: center;
 
 
         li {
             display: block;
+           align-items: center;
            
-        }
+        } 
     }
-
 }
-.tittle {margin-bottom: 10%; margin-top: 10%;}
+
+.tittle {margin-bottom: 5%; margin-top: 10%; text-align: center;}
 li {
     display: inline-block;
     width: 250px;
@@ -196,9 +200,9 @@ head {
     margin-top: 0%;
 }
 
-.imgsg {display: inline; width: 50%;margin-left: -8%; margin-top: 10%;}
-.imgsg2 {display: inline; width: 50%; margin-right: -8%; }
-.gif {width: 100%; margin-left: -8%; margin-top: 5%;}
+.imgsg {display: inline; width: 50%; margin-top: 10%;}
+.imgsg2 {display: inline; width: 50%; margin-right: -8%; overflow: hidden; }
+.gif {width: 100%; margin-top: 20%;}
 .displaynone {display: none;}
 .controls {
     width: 100%;
@@ -248,10 +252,11 @@ head {
 
 
 #fondo2 {
-    display: block;
+    display: inline !important;
     background-color: rgb(173, 95, 137);
     border-color: rgb(173, 95, 137);
     margin-top: 50px;
+    text-align: center !important;
 }
 
 nav a {
@@ -263,13 +268,13 @@ nav a {
 
 
 
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
 
     body {
         height: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1 Fr);
-        grid-template-rows: 2 Fr, 1 Fr, 1 Fr, 1 Fr, 1 Fr;
+        grid-template-rows: 2 Fr, 1 Fr, 1 Fr, 3 Fr, 1 Fr;
         grid-template-areas:
             "header header"
             "content content"
@@ -405,6 +410,7 @@ nav a {
         width: 80%;
         height: 80%;
     margin: 10%;
+    
     }
 
     .iframe1 {
@@ -482,14 +488,20 @@ nav a {
         padding: 20px;
         text-align: center;
         margin: 0;
-        height: 100%;
+        height: 90%;
         margin-left: 5%;
 
     }
+    .solicitud {width: 80%; height: 80%; margin-top: 50%; padding-left: 8%; padding-right: 8%; margin-left: 0;}
+    .imgsg {margin-left: 3%;}
+    .imgsg2 {margin-right:-5%; margin-left: -2%; height: 62vh; }
+
+
+    .gif {margin-left: 5%; width: 90%; margin-top: 20%;} 
 
     .btnn {
         width: 50%;
-        height: 10%;
+        height: 20%;
     }
   
     #carouselExampleDark {
@@ -503,6 +515,7 @@ nav a {
     #contentt {
         margin: 0 !important;
         width: 100% !important;
+        
 
     }
 
@@ -518,29 +531,20 @@ nav a {
         height: 35px;
     }
 
-    #visa2 {
-        width: 50px;
-       
-    }
-
-    #CST2 {
-        font-size: small;
-        margin-bottom: 0px;
-        margin-top: 50px;
-        margin-left: 50vh
-    }
-
+ 
     .titulo {
-        height: 32%; padding-top: 11% !important; font-size: 35px !important;
+        height: 32%; padding-top: 14% !important; font-size: 35px !important;
        }
 
-#mdepago{margin-left: 17%; margin-right: 17%;}
+
 
     .formc {
         width: 100%;
-     padding: 10%;
+    padding: 10%;
         background-color: rgb(255, 255, 255);
-        margin-top: 10%; z-index: 1; text-align: center;
+        z-index: 2 !important; 
+        text-align: center;
+     margin-top: 0;
     }
 
     #input2 {
@@ -551,8 +555,8 @@ nav a {
         padding: 10px;
         display: inline-block;
     }
-#input3 {width: 25%; height: 30px; margin-left: 5px;}
-
+#input3 {width: 70px; height: 30px; margin-left: 5px; margin-right: 5px;} 
+.divdomic {display: inline-flex; margin-right: 0%; margin-bottom: 5%; margin-left: 15%;}
 
     #email {
         width: 100%;
@@ -587,7 +591,9 @@ nav a {
     }
 
 
-
+    .pdc {
+        padding: 5%;
+       }
     .accordion {
         margin-top: 100px;
     }
@@ -622,11 +628,11 @@ nav a {
         text-align: center;
         width: 90%;
         padding: 5%;
-    
+    margin-left: 0;
         margin-top: 10%;
         margin-bottom: 10%;
     }
-
+    #carouselExampleInterval {height: 40% !important;}
     .grid {
         margin: 0 !important;
         max-width: 100% !important;
@@ -640,7 +646,7 @@ nav a {
         height: 400px;
     }
 
-.btn-form {margin: 40%;}
+    #-form {text-align: center !important;}
     .btnn {
       margin: auto;
     }
@@ -691,15 +697,15 @@ legend {margin-left: 0%;}
     }
 
     .d-block {
-        height: 400px;
+        height: 400px; overflow: hidden;
     }
-
+    
     .accordion-body {
         width: 100%;
         z-index: 1 !important;
      
     }
-
+    footer {margin-top: 60%; position: relative;}
     table {
         margin-left: 8%;
     }
@@ -708,9 +714,7 @@ legend {margin-left: 0%;}
         margin-left: 0%;
     }
 
-    #CST {
-        margin-left: 10% !important;
-    }
+    
     .margin{
         margin-top: 20%
     }
@@ -749,14 +753,11 @@ legend {margin-left: 0%;}
         margin-left: 0;
     }
 
-.aboutus {margin-top: 80% !important; padding-top: 60px; line-height: 50px; height: 100%;}
-.imgst {margin-top: 70%; margin-left: 44%; width: 60px; height: 60px;}
+.aboutus {margin-top: 80% !important; padding-top: 60px; line-height: 50px; height: 85%; font-size: large;}
+.imgst {margin-top: 70%; width: 80px; height: 80px; margin-left: 40%;}
 
 }
 
-a:hover { 
-    color: white;
-}
 
 
 .animate__heartBeat {
@@ -775,7 +776,7 @@ nav ul {
             display: inline;
             color: #fff;
             text-decoration: none;
-            margin-top: 10px;
+          
         }
     }
 }
@@ -823,7 +824,8 @@ nav ul li:hover {
 
 #contentt {
     margin-left: 184px;
-    margin-top: 100px;
+   
+
 }
 
 #volveralI {
@@ -842,4 +844,5 @@ nav ul li:hover {
     position: fixed;
     margin-top: 500px;
     z-index: 2;
+    filter: opacity(0.5) drop-shadow(0 0 0 rgb(255, 255, 255))
 }

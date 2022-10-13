@@ -13,17 +13,20 @@
     display: inline-block;
     padding-left: 5%;
     margin-left: 5px;
+    justify-content: center;
+   text-align: center;
 }
 .cardd-left {
     width: 40%;
     height: 700px;
     display: inline;
-   
+
 }
 .cardd-img {
     width: 40%;
     height: 700px;
     margin-bottom: 46%;
+    overflow: hidden !important; 
 }
 
 
@@ -37,6 +40,7 @@
     width: 85%;
     height: 70%;
     align-self: center;
+    overflow: hidden !important;
 }
 
 .card__image2 {
@@ -65,8 +69,7 @@
     margin-top: 30px;
     margin-left: 20%;
 }
-.mnu {
-    text-align: center;
+.mnu {margin-left: 40%;
     padding-top: 30px;
 }
 .tmñimg {

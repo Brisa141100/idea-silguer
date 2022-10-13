@@ -22,4 +22,6 @@
 .d-block {
     height: 550px;
 }
-#carouselExampleInterval {margin-left: 10%;}
+
+.carousel-control-prev-icon {color: black !important;}
+#carouselExampleInterval {margin: 10% !important; width: 90%; height: 20%;}
